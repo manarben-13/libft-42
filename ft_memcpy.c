@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 09:51:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/08 12:06:16 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/08 14:11:54 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/08 14:38:24 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *arr , int c , size_t n)
+void *ft_memcpy(void*dest, const void *src , size_t n )
 {
-	unsigned char	*ptr;
-	size_t			i;
-
-	i = 0;
-	ptr = (unsigned char *)arr;
-	while (i < n)
-	{
-		ptr[i] = (unsigned char)c;
-		i++;
+	unsigned char *d; 
+    unsigned char *s;
+    size_t i;
+    
+    d = dest; 
+    s = src;
+    i = 0;
+    
+    while (d[i] && s[i] && i < n )
+    {
+      d[i] = s[i];
+	  i++;
 	}
-	return(arr);
+	return(d);
 }
 
 //int main ()
 //{
-	// char arr[] = "geeksforgeeks";
-	// char a = 'a';
-	//int arr[5] = {1, 2, 3, 4, 5};
-	//int a = 0;
-	//memset(arr, a, 12);
-	// printf("%s", arr);
-	//int i = 0;
-	//while (i < 5)
-	//{
-	//	printf("%d\n", arr[i++]);
-	//}
+//	char n [] = "manar";
+//	char r [] = "sa";
+//	char *s;
+//	s = ft_memcy(d,r,2);	
+//	printf("%s", s );
 //}

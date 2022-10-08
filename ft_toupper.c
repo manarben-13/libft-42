@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 09:51:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/08 12:06:16 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/08 16:08:45 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/08 16:45:27 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *arr , int c , size_t n)
+int ft_toupper (int c)
 {
-	unsigned char	*ptr;
-	size_t			i;
-
-	i = 0;
-	ptr = (unsigned char *)arr;
-	while (i < n)
+	
+	if (c >= 97 && c <= 122 )
 	{
-		ptr[i] = (unsigned char)c;
-		i++;
+		c -=32;
 	}
-	return(arr);
+	return(c);
 }
 
 //int main ()
 //{
-	// char arr[] = "geeksforgeeks";
-	// char a = 'a';
-	//int arr[5] = {1, 2, 3, 4, 5};
-	//int a = 0;
-	//memset(arr, a, 12);
-	// printf("%s", arr);
-	//int i = 0;
-	//while (i < 5)
-	//{
-	//	printf("%d\n", arr[i++]);
-	//}
+//	printf("%c", ft_toupper('m'));
 //}
