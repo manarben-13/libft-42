@@ -1,18 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrch.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 09:52:36 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/09 17:47:52 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/09 16:09:14 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/09 16:21:40 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char *ft_strrchr(const char *str , int c)
 {
-	ft_memset(s, 0, n);
+    char    *ptr;
+    int len;
+
+    ptr = (char *)str;
+    len = ft_strlen(ptr);
+    if (!ptr)
+        return (NULL);
+    while (len > 0)
+    {
+        if (ptr[len] == c)
+        {
+            return (&ptr[len]);
+        }
+        len--;
+    }
+    return(ptr);
 }
+
+//int main ()
+//{
+ 
+//  printf("%s", ft_strrchr("manar" , 'a'));
+//}
