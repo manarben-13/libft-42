@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:45:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/09 15:14:05 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/10 10:12:36 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define LIBFT_H
 
 #include<stdio.h>
-#include<unistd.h>
 #include<stdlib.h>
 #include<string.h>
 
