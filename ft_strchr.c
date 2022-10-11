@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 18:55:20 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/09 10:52:25 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/11 11:29:43 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/11 11:42:16 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<unistd.h>
+#include "libft.h"
+
 char *ft_strchr(const char *str , int c)
 {
-	char	*ptr;
+    char    *ptr;
     int i;
 
     i = 0;
-	ptr = (char *)str;
-	if (!ptr)
-		return (NULL);
+    ptr = (char *)str;
+    if (!ptr)
+        return (NULL);
     while (ptr[i] )
     {
         if (ptr[i] == c)
         {
-			return (&ptr[i]);
+            return (&ptr[i]);
         }
         i++;
     }
@@ -42,5 +42,5 @@ int main ()
 //  char *n =  "manarben";
 //  char m = 'n';
   
-//  printf ("%s", strchr(n,m));
+//  printf ("%s", ft_strchr(n,m));
 // }

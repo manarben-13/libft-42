@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:45:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/10 15:36:22 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/11 11:46:02 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,13 @@ void *ft_memset(void *arr , int c , size_t n);
 void ft_bzero(void *s , size_t n );
 char *ft_strchr(const char *str , int c); 
 void *ft_memmove(void*dest, const void *src, size_t    n);
+int ft_toupper (int c);
+int ft_tolower (int c);
+char *ft_strrchr(const char *str , int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+void *ft_memcpy(void*dest, const void *src, size_t	n);
+char *ft_strchr(const char *str , int c);
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
+
 
 #endif
