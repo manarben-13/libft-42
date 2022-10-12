@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:38:43 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/10 17:10:48 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/12 10:54:57 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ void *ft_memmove(void*dest, const void *src, size_t    n)
     }
     else
     {
-      while (n > 0)
+      while (n--)
       {
         d[n] = s[n];
-        n--;
+        
       }
     }
     return (d);
@@ -45,8 +45,8 @@ int main ()
 {
     char n [] = "1337 is a school";
     char *s;
-    s = ft_memmove(n + 3, n, 3);
+    s = ft_memmove(n , n +3, 3);
     printf("%s\n", s );
-	s = memmove(n + 3, n, 3);
+	s = memmove(n , n +3 , 3);
     printf("%s", s );
 }

@@ -1,46 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 11:29:43 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 10:22:29 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/12 10:26:56 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/12 12:49:20 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *str , int c)
+int ft_memcmp (const void *s1, const void *s2, size_t n)
 {
-    char    *ptr;
-    int i;
-
+    size_t i;
+    unsigned char *ptr1;
+    unsigned char *ptr2;
+    
+    ptr1 = (unsigned char*)s1;
+    ptr2 = (unsigned char*)s2;
     i = 0;
-    ptr = (char *)str;
-	
-    while (ptr[i])
+    
+    while ( i < n)
     {
-        if (ptr[i] == (char)c)
-        {
-            return (&ptr[i]);
-        }
+        if(ptr1[i] != ptr2[i])
+        	return(ptr1[i] - ptr2[i]);
         i++;
     }
-    return(NULL);
+    return(0);
+    
 }
-
 int main ()
 {
- 
-  printf("%s\n", ft_strchr(NULL , 'd'));
-  printf("%s\n", strchr(NULL , 'd'));
+    char *n = "abcsd";
+    char *m = "abcs";
+    printf("%d\n" , ft_memcmp(n,m,5));
+
+    printf("%d\n", memcmp(n,m,5));
 }
-//int main ()
-//{
-//  char *n =  "manarben";
-//  char m = 'n';
-  
-//  printf ("%s", ft_strchr(n,m));
-// }
