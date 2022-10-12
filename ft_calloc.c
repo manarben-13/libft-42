@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:49:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 17:33:06 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/12 19:10:37 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 void *ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*ptr;
-	size_t			i; 
-
-	i = 0;
-	ptr = (unsigned char*)malloc(count*size);
-	if(!ptr)
-		return(NULL);
-	while(ptr[i])
-	{
-		ptr[i] = 0;
-	}
-	return(ptr);
+  unsigned char *ptr;
+  size_t i;
+  
+  i = 0;
+  ptr = (unsigned char*)malloc(size * count);
+  if (!ptr)
+    return (NULL); 
+  while (i < count)
+  {
+    ptr[i] = 0;
+    i++;
+  }
+  return (ptr);
 }
-
 int main ()
 {
-	char *s = calloc (2,4);
-	printf("%s\n", s);
-	//printf("%d\n", ft_calloc (2,4));
+    char *s = calloc (65,5);
+    printf("%s \t%zu\n", s, strlen(s));
+    printf("%p\t %lu\n", ft_calloc (6,5), strlen(ft_calloc (2,4)));
 }
