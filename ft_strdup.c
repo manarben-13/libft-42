@@ -1,39 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrch.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 16:09:14 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 14:57:49 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/12 15:32:53 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/12 16:34:03 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-char *ft_strrchr(const char *str , int c)
+char *ft_strdup(const char *s1)
 {
-    char    *ptr;
-    int len;
-
-    ptr = (char *)str;
-    len = ft_strlen(ptr);
-
-    while (len > 0)
-    {
-        if (ptr[len] == c)
-        {
-            return (&ptr[len]);
-        }
-        len--;
-    }
-    return(NULL);
+  	size_t i;
+  	size_t len ;
+	char *ptr;
+	char *str; 
+  
+  i = 0;
+  str = (char*) s1;
+  len = ft_strlen(str);
+  
+  ptr = (char*)malloc (sizeof(char *)*len );
+  while( s1[i] )
+  {
+    ptr[i]= s1[i];
+    i++;
+  }
+   ptr[i] = '\0';
+  return(ptr); 
 }
 
 int main ()
 {
- 
-  printf("%s\n", ft_strrchr("manar" , 'a'));
-  printf("%s", strrchr("manar" , 'a'));
+  char *s;
+  s = "manarbensaouab";
+  
+  printf ("%s\n" , ft_strdup(s));
+  printf ("%s\n" , strdup(s));
 }

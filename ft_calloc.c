@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrch.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 16:09:14 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 14:57:49 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/12 16:49:27 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/12 17:33:06 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-char *ft_strrchr(const char *str , int c)
+void *ft_calloc(size_t count, size_t size)
 {
-    char    *ptr;
-    int len;
+	unsigned char	*ptr;
+	size_t			i; 
 
-    ptr = (char *)str;
-    len = ft_strlen(ptr);
-
-    while (len > 0)
-    {
-        if (ptr[len] == c)
-        {
-            return (&ptr[len]);
-        }
-        len--;
-    }
-    return(NULL);
+	i = 0;
+	ptr = (unsigned char*)malloc(count*size);
+	if(!ptr)
+		return(NULL);
+	while(ptr[i])
+	{
+		ptr[i] = 0;
+	}
+	return(ptr);
 }
 
 int main ()
 {
- 
-  printf("%s\n", ft_strrchr("manar" , 'a'));
-  printf("%s", strrchr("manar" , 'a'));
+	char *s = calloc (2,4);
+	printf("%s\n", s);
+	//printf("%d\n", ft_calloc (2,4));
 }
