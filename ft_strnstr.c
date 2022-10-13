@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 16:49:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/13 12:07:03 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/13 12:16:18 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/13 12:19:15 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+char *strnstr(const char *haystack, const char *needle, size_t len)
 {
-  unsigned char *ptr;
-  size_t i;
-  
-  i = 0;
-  ptr = (unsigned char*)malloc(size * count);
-  if (!ptr)
-    return (NULL); 
-  while (i < count)
-  {
-    ptr[i] = 0;
-    i++;
-  }
-  return (ptr);
-}
-int main ()
-{
-    char *s = calloc (65,5);
-    printf("%p\t%zu\n", s, strlen(s));
-    printf("%p\t %zu\n", ft_calloc (6,5), strlen(ft_calloc (2,4)));
+	size_t i;
+	unsigned char *h;
+	unsigned char *n;
+	
 }
