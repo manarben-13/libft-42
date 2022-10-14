@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:49:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/13 12:07:03 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/14 10:25:00 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ int main ()
     char *s = calloc (65,5);
     printf("%p\t%zu\n", s, strlen(s));
     printf("%p\t %zu\n", ft_calloc (6,5), strlen(ft_calloc (2,4)));
-}
+} 
