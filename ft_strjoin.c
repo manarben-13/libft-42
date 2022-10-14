@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 12:35:15 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/14 15:02:25 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/14 16:41:24 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     char *ptr;
     
 	 if (!s1 || !s2 )
-	 	return NULL;
+	 	return (NULL);
     len1 = ft_strlen(s1);
     len2 = ft_strlen(s2);
     len = len1 + len2;
@@ -51,8 +51,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 
 int main ()
 {
-  char *a = NULL;
-  char *b = NULL;
+  char *a = "manar";
+  char *b = "1337";
   char *m = ft_strjoin(a,b);
   printf("%s", m);
 }
