@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:45:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/14 14:44:02 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/17 19:22:58 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<unistd.h>
+#include <fcntl.h>
 
 int ft_isalpha(int arg);
 int ft_isdigit( int arg );
