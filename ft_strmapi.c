@@ -6,15 +6,15 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:37:03 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 18:47:55 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/18 21:01:39 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_edit(unsigned int i ,char c)
+char ft_edit(unsigned int i ,char  c)
 {
-    
+    i = 0;
    c += i;
     return(c);
 }
