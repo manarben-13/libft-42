@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:45:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/17 19:22:58 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:24:25 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,9 @@ void *ft_memcpy(void*dest, const void *src, size_t	n);
 char *ft_strchr(const char *str , int c);
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strjoin(char const *s1, char const *s2);
-
+void ft_putchar_fd(char c, int fd);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+void ft_putstr_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
 #endif

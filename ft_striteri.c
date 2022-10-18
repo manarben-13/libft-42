@@ -1,49 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 18:37:03 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 18:47:55 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/18 19:22:22 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/18 19:31:56 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int ft_edit(unsigned int i ,char c)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    
-   c += i;
-    return(c);
-}
-
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
-    unsigned int i;
+	unsigned int i;
     unsigned int len;
     char *str;
     char *ptr;
     
     str = (char *)s;
     i = 0;
-    len = strlen(str);
-    ptr = (char*)malloc(len*sizeof(char) + 1);
-    if(!ptr)
-        return(NULL);
     while(str[i])
     {
-        ptr[i] = f(i, s[i]);
+        str[i] = f(i, str[i]);
     }
-    ptr[i] = '\0';
-    return(ptr);
-    
+    str[i] = '\0';
+    return(str);
 }
-
+int ft_edit(unsigned int i ,char c)
+{
+    
+   c += i;
+    return(c);
+}
 int main ()
 {
-    char n[] = "manar";
-	ft_strmapi(n, ft_edit());
-    printf("%s\n", n);
+	char m[]= "manar";
+	ft_striteri(m,&ft_edit());
+	printf("%s",m);
 }
