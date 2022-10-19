@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:32:53 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 16:34:03 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/18 22:54:54 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ char *ft_strdup(const char *s1)
   return(ptr); 
 }
 
-int main ()
-{
-  char *s;
-  s = "manarbensaouab";
+// int main ()
+// {
+//   char *s;
+//   s = "manarbensaouab";
   
-  printf ("%s\n" , ft_strdup(s));
-  printf ("%s\n" , strdup(s));
-}
+//   printf ("%s\n" , ft_strdup(s));
+//   printf ("%s\n" , strdup(s));
+// }

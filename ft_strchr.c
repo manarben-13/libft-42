@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:29:43 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 10:22:29 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/18 22:54:50 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ char *ft_strchr(const char *str , int c)
     return(NULL);
 }
 
-int main ()
-{
+// int main ()
+// {
  
-  printf("%s\n", ft_strchr(NULL , 'd'));
-  printf("%s\n", strchr(NULL , 'd'));
-}
+//   printf("%s\n", ft_strchr(NULL , 'd'));
+//   printf("%s\n", strchr(NULL , 'd'));
+// }
 //int main ()
 //{
 //  char *n =  "manarben";

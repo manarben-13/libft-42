@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:41 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 20:06:58 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/18 22:54:42 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ void ft_putnbr_fd(int n, int fd)
   }
 }
 
-int main ()
-{
-	int fd = open("./txt", O_RDWR | O_CREAT);
-	printf("%d\n", fd);
-	ft_putchar_fd('z', fd);
-	ft_putnbr_fd( 45, fd );
-}
+// int main ()
+// {
+// 	int fd = open("./txt", O_RDWR | O_CREAT);
+// 	printf("%d\n", fd);
+// 	ft_putchar_fd('z', fd);
+// 	ft_putnbr_fd( 45, fd );
+// }
 
 // 0 ==> std input stdin
 // 1 ==> std output stdout
