@@ -6,29 +6,36 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:02 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/20 19:57:24 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/20 21:02:12 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_start(char *s, char *set)
+int    ft_start (char *s, char *set)
 {
-	int	i;
-	int	j;
-
+    int    len;
+    int    i;
+    int c;
+    
+    len = 0;
     i = 0;
-    j = 0;
-    while (s[i] && set[j])
+    c = 0;
+    
+    while ( s[len] && set [i] )
     {
-		if (s[i] == set [j])
-        {
-          j++;
-        }
-        else
-          i++;
+      i =0;
+      while (set [i] && s [len] != set [i])
+      {
+        i++;
+      }
+      if( s[len] == set [i])
+      {
+        c++;
+      }
+      len ++;
     }
-    return(j);
+    return (c);
 }
 
 int    ft_end(char *s, char *set)
@@ -54,7 +61,7 @@ int    ft_end(char *s, char *set)
       }
       len --;
     }
-      return (c);
+	return (c);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -70,11 +77,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	src = (char*)s1;
 	str = (char*)set;
 	j = 0;
+	if (!s1 || !set)
+		return NULL;
 	start = ft_start(src, str);
 	end = ft_end (src , str);
 	len = ft_strlen(src) - (start + end);
-	ptr = (char*)malloc(len *sizeof(char*) + 1);
 	
+	if (len <= 0)
+		return (ft_strdup(""));
+	ptr = (char*)malloc(len *sizeof(char*) + 1);
+	if (!ptr)
+		return NULL;
 	while (start < (ft_strlen(src) - end ))
 	{
 		ptr[j] = src [start];
@@ -90,8 +103,8 @@ int main ()
     char *m;
     char *r;
     char *n;
-    m = "123manar123";
-    r = "231";
+    m = "NULL";
+    r = "NULL";
     n = ft_strtrim(m,r);
-    printf("%s", n);
+    printf("%s\n", n);
 }
