@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:27:31 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 12:22:00 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:30:25 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ int	ft_strncmp(const char *first , const char *second , size_t len)
 	return(0);
 }
 
-int main ()
-{
-	char *m;
-	char *n;
+// int main ()
+// {
+// 	char *m;
+// 	char *n;
 
-	m = "abc";
-	n = "acb";
+// 	m = "abc";
+// 	n = "acb";
 	
-	printf("%d", ft_strncmp(m, n, 2));
-}
+// 	printf("%d", ft_strncmp(m, n, 2));
+// }

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:09:14 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 14:57:49 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:30:42 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ char *ft_strrchr(const char *str , int c)
     return(NULL);
 }
 
-int main ()
-{
+// int main ()
+// {
  
-  printf("%s\n", ft_strrchr("manar" , 'a'));
-  printf("%s", strrchr("manar" , 'a'));
-}
+//   printf("%s\n", ft_strrchr("manar" , 'a'));
+//   printf("%s", strrchr("manar" , 'a'));
+// }

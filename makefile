@@ -25,7 +25,7 @@ SRC = ft_isalpha.c\
 	ft_strnstr.c\
 	ft_strrch.c\
 	ft_tolower.c\
-	ft_toupper.c\
+	ft_toupper.c
 
 OBJ = $(SRC:.c=.o)
 CC = gcc
@@ -44,5 +44,4 @@ clean :
 fclean : clean 
 		rm -rf $(NAME)
 
-re :
-		fclean all 
+re :	fclean clean all 

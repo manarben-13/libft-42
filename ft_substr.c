@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:14:51 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/14 12:32:17 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:31:30 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ size_t len)
     
 }
 
-int main ()
-{
-    char *r;
-    r = "manarbensalah1337";
+// int main ()
+// {
+//     char *r;
+//     r = "manarbensalah1337";
     
-    printf("%s",ft_substr(r,1,12));
-}
+//     printf("%s",ft_substr(r,1,12));
+// }

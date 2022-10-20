@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:22:22 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 21:00:18 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:29:37 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int ft_edit(unsigned int i ,char c)
    c += i;
     return(c);
 }
-int main ()
-{
-	char m[]= "manar";
-	ft_striteri(m,ft_edit);
-	printf("%s",m);
-}
+// int main ()
+// {
+// 	char m[]= "manar";
+// 	ft_striteri(m,ft_edit);
+// 	printf("%s",m);
+// }

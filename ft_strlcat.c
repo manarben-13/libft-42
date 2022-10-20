@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:25:51 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/12 20:03:06 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:29:55 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@
     
  }
 
-int main() 
-{
-	char *d = "hello world";
-	char *s = "manar";
-	size_t i = ft_strlcat(d, s, 10);
-	printf("%zu\n", i);
-	d = "hello world";
-	s = "manar";
-	i = strlcat(d, s, 10);
-	printf("%s\n", d);
-}
+// int main() 
+// {
+// 	char *d = "hello world";
+// 	char *s = "manar";
+// 	size_t i = ft_strlcat(d, s, 10);
+// 	printf("%zu\n", i);
+// 	d = "hello world";
+// 	s = "manar";
+// 	i = strlcat(d, s, 10);
+// 	printf("%s\n", d);
+// }

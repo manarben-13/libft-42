@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:37:03 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 21:01:39 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:30:19 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     
 }
 
-int main ()
-{
-    char n[] = "manar";
-	ft_strmapi(n, ft_edit());
-    printf("%s\n", n);
-}
+// int main ()
+// {
+//     char n[] = "manar";
+// 	ft_strmapi(n, ft_edit());
+//     printf("%s\n", n);
+// }

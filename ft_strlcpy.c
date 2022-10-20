@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:51:16 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/10 16:19:42 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:30:03 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return(len);
 }
 
-int main ()
-{
-	char m[] = "quizquizgoal";
-	char n[] = "geeksforgeeks";
-	size_t	i;
-	i = ft_strlcpy(m, n, 0);
-	printf("ft_strlcpy = %zu\t%s\n", i, m);
-	char a[] = "quizquizgoal";
-	char b[] = "geeksforgeeks";
-	printf("strlcpy = %zu\t%s\n", strlcpy(a, b, 0), a);
-}
+// int main ()
+// {
+// 	char m[] = "quizquizgoal";
+// 	char n[] = "geeksforgeeks";
+// 	size_t	i;
+// 	i = ft_strlcpy(m, n, 0);
+// 	printf("ft_strlcpy = %zu\t%s\n", i, m);
+// 	char a[] = "quizquizgoal";
+// 	char b[] = "geeksforgeeks";
+// 	printf("strlcpy = %zu\t%s\n", strlcpy(a, b, 0), a);
+// }
