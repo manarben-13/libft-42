@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 12:32:34 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 10:11:19 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:30:26 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ char	*ft_itoa(int n)
     return(ptr);
 }
 
-int main ()
-{
-  int m = -2147483648;
-  printf ("m = {%s}\n" , ft_itoa(m));
-}
+// int main ()
+// {
+//   int m = -2147483648;
+//   printf ("m = {%s}\n" , ft_itoa(m));
+// }

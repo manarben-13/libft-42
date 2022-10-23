@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:14:51 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/22 11:23:04 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:07:34 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,13 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 // size_t main ()
 // {
 //     char *r;
-//     r = "manarbensalah1337";
+//     r = "manar ben salah 1337";
     
 //     printf("%s",ft_substr(r,1,12));
 // }
+
+
+
+
+
+

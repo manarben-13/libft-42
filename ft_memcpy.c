@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:11:54 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 22:54:29 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:55:51 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,30 @@
 
 void *ft_memcpy(void*dest, const void *src, size_t	n)
 {
-	unsigned char	*d; 
+	unsigned char	*d;
     unsigned char	*s;
 	size_t			i;
 
     d = (unsigned char*)dest;
     s = (unsigned char*)src;
     i = 0;
-
-	while (d[i] && s[i] && i < n)
+	if (!dest)
+		return NULL;
+	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return (d);
+	return (dest);
 }
 
 // int main ()
 // {
-// 	char n [] = "geeksforgeeks";
-// 	// char *r = n;
-// 	char *s;
-// 	s = ft_memcpy(n + 3, n, 10);
-// 	printf("%s", s );
+// 	char *n;// = "test basic du memcpy !";
+// 	// char src[22];
+// 	// char dst[22];
+// 	// char *s;
+// 	// s = memcpy("         ", ((void *)0), 3);
+// 	n = ft_memcpy("         ", ((void *)0), 3);
+// 	printf("%s\n", n);
 // }

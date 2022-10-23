@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:32:53 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 22:54:54 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:14:42 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 char *ft_strdup(const char *s1)
 {
   	size_t i;
-  	size_t len ;
+  	size_t len;
 	char *ptr;
 	char *str; 
   
   i = 0;
   str = (char*) s1;
+  if (!s1)
+	return NULL;
   len = ft_strlen(str);
-  
-  ptr = (char*)malloc (sizeof(char *)*len );
+  ptr = (char*)malloc(sizeof(char *)*len);
+  if (!ptr)
+	return NULL;
   while( s1[i] )
   {
     ptr[i]= s1[i];
@@ -36,8 +39,10 @@ char *ft_strdup(const char *s1)
 // int main ()
 // {
 //   char *s;
-//   s = "manarbensaouab";
+//   s = "this is a normal test";
+//   char *s1 = ft_strdup(s);
+//   char *s2 = strdup(s);
   
-//   printf ("%s\n" , ft_strdup(s));
-//   printf ("%s\n" , strdup(s));
+//   printf ("%s\t %lu\n", s1, strlen(s1));
+//   printf ("%s\t %lu\n", s2, strlen(s2));
 // }

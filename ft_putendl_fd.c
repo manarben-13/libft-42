@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 20:40:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 22:54:38 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:26:49 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@ void ft_putendl_fd(char *s, int fd)
 {
 	int i;
 	i = 0;
+	
+	if (!s)
+		return ;
 
 	while (s[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 20:22:36 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 22:54:45 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:17:10 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void ft_putstr_fd(char *s, int fd)
 {
 	int i;
 	i = 0;
-
+	
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i],fd);

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:09:04 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/08 07:45:13 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:57:47 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_isascii(int arg)
 {
-    if(arg>= 0 && arg <= 126)
+    if(arg>= 0 && arg <= 127)
         return(1);
     else 
         return(0);

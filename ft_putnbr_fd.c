@@ -6,21 +6,17 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:41 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/22 15:38:06 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:27:41 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
-{
-    write(fd,&c,1);
-}
-
 void ft_putnbr_fd(int n, int fd)
 {
   long int nbr;
   nbr = n;
+  
   if(nbr < 0)
   {
     ft_putchar_fd('-',fd);
