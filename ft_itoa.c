@@ -5,14 +5,64 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 20:24:31 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/20 22:12:38 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/10/22 12:32:34 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/10/23 10:11:19 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int counter (long nbr)
+{
+	int count ;
+	
+	count = 0;
+	
+	if (nbr < 0)
+	{
+		count ++;
+		nbr = nbr * -1;
+	}
+	while ( nbr != 0)
+	{
+		nbr = nbr / 10;
+		count ++;
+	}
+	return(count);
+}
+
 char	*ft_itoa(int n)
 {
-	
+    int count;
+    char *ptr;
+    int i;
+	long	nb;
+
+    nb = n;
+	count = counter(nb);
+    i = 0;
+    ptr = (char *)malloc(count + 1);
+    if (!ptr)
+        return NULL;
+    ptr[count] = '\0';
+	if (n < 0)
+	{
+		nb *= -1;
+		i = 1;
+	}
+    while(count > 0)
+    {
+        ptr[count - 1] = (nb % 10 + 48);
+        nb = nb / 10;
+        count --;
+    }
+  	if (i == 1)
+		ptr[0] = '-';
+    return(ptr);
+}
+
+int main ()
+{
+  int m = -2147483648;
+  printf ("m = {%s}\n" , ft_itoa(m));
 }

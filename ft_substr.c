@@ -6,18 +6,17 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:14:51 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/19 18:31:30 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/22 11:23:04 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start,
-size_t len)
+char *ft_substr(char const *s, unsigned int start,size_t len)
 {
 	char *str;
-    int i;
-    int j;
+    size_t i;
+    size_t j;
     char *ptr;
     
     str = (char *)s;
@@ -41,10 +40,9 @@ size_t len)
     }
 	ptr[i] = '\0';
     return(ptr);
-    
 }
 
-// int main ()
+// size_t main ()
 // {
 //     char *r;
 //     r = "manarbensalah1337";

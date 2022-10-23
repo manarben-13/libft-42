@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:02 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/20 21:02:12 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/22 10:36:16 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int    ft_start (char *s, char *set)
     while ( s[len] && set [i] )
     {
       i =0;
-      while (set [i] && s [len] != set [i])
+      while (set[i] && s[len] != set[i])
       {
         i++;
       }
-      if( s[len] == set [i])
+      if( s[len] == set[i])
       {
         c++;
       }
@@ -98,13 +98,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return(ptr);
 }
 
-int main ()
-{
-    char *m;
-    char *r;
-    char *n;
-    m = "NULL";
-    r = "NULL";
-    n = ft_strtrim(m,r);
-    printf("%s\n", n);
-}
+// int main ()
+// {
+//     char *m;
+//     char *r;
+//     char *n;
+//     m = "123manar123";
+//     r = "123";
+//     n = ft_strtrim(m,r);
+//     printf("%s\n", n);
+// }
