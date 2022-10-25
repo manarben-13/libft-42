@@ -6,25 +6,11 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:08:38 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 19:34:28 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:41:11 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int ft_lettre( char *s , char c  )
-{
-  int i;
-  int lettre; 
-  
-  lettre = 0;
-  i = 0;
-  
-  while ( s[i] != '\0' )
-  {
-    while (
-  
-  while (s[i]
 
 int ft_word_count(char *str , char c)
 {
@@ -54,6 +40,25 @@ int ft_word_count(char *str , char c)
         }
     }
     return(count);
+}
+
+char *alloc_words(char *s , int start , int finish)
+{
+  int i;
+  char *word;
+  
+  i = 0;
+  
+  word =(char*) malloc ( sizeof (*s) * ( finish - start )+ 1);
+  while( s[i] && start < finish )
+  {
+    word[i] = s[start];
+    
+    start ++;
+    i++;
+  }
+  word[i] = '\0';
+  return(word);
 }
 
 char **ft_split(char const *s, char c)
