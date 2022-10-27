@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:02 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/22 10:36:16 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:48:16 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int    ft_end(char *s, char *set)
     int    i;
     int c;
     
-    len = strlen(s) - 1;
+    len = ft_strlen(s) - 1;
     i = 0;
     c = 0;
     

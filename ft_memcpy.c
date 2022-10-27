@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:11:54 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 12:55:51 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:11:55 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void *ft_memcpy(void*dest, const void *src, size_t	n)
     unsigned char	*s;
 	size_t			i;
 
-    d = (unsigned char*)dest;
+    if (!dest && !src)
+		return (NULL);	
+	d = (unsigned char*)dest;
     s = (unsigned char*)src;
     i = 0;
-	if (!dest)
-		return NULL;
 	while (i < n)
 	{
 		d[i] = s[i];

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:45:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 12:19:52 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:36:18 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char *ft_substr(char const *s, unsigned int start,size_t len);
 void ft_striteri(char *s, void (*f)(unsigned int,char*));
 char *ft_itoa (int n);
+char **ft_split(char const *s, char c);
 
 #endif

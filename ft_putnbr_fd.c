@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:50:41 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 13:27:41 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:58:08 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void ft_putnbr_fd(int n, int fd)
 {
-  long int nbr;
+  long nbr;
   nbr = n;
   
   if(nbr < 0)
@@ -23,23 +23,25 @@ void ft_putnbr_fd(int n, int fd)
     nbr = nbr * -1;
    
   }
-  else if ( nbr > 9)
+  if (nbr <= 9)
   {
-    ft_putnbr_fd(nbr / 10 , fd);
-    ft_putchar_fd( nbr % 10 + 48 , fd);
+    ft_putchar_fd( nbr + 48 , fd);
   }
   else
   {
-    ft_putchar_fd( nbr + 48 , fd);
+    ft_putnbr_fd(nbr / 10 , fd);
+    ft_putnbr_fd( nbr % 10 , fd);
   }
 }
 
 // int main ()
 // {
-// 	int fd = open("./txt", O_RDWR | O_CREAT);
-// 	printf("%d\n", fd);
-// 	ft_putchar_fd('z', fd);
-// 	ft_putnbr_fd( 45, fd );
+// 	// int fd = open("./txt", O_RDWR | O_CREAT);
+// 	int i = -2147483647 -1;
+//   // printf("%d\n", 2);
+// 	// ft_putchar_fd('z', 2);
+// 	ft_putnbr_fd( i , 2);
+// 	// putnbr_fd(i  , 2);
 // }
 
 // 0 ==> std input stdin

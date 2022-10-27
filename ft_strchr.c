@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:29:43 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 13:03:31 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:03:18 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ char	*ft_strchr(const char *str, int c)
 
     i = 0;
     ptr = (char *)str;
-	
+	if ( c == 0)
+        return (ptr + ft_strlen(ptr));
     while (ptr[i])
     {
-        if (ptr[i] == (char)c)
+        if (ptr[i] == (unsigned char)c)
         {
             return (&ptr[i]);
         }
@@ -38,10 +39,10 @@ char	*ft_strchr(const char *str, int c)
 //   printf("%s\n", strchr(NULL , 'd'));
 // }
 
-int main ()
-{
- char *n = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
- char m = '\0';
+// int main ()
+// {
+//  char *n = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+//  char m = '\0';
   
- printf ("%s", ft_strchr(n,m));
-}
+//  printf ("%s", ft_strchr(n,m));
+// }

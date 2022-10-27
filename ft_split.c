@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:08:38 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/24 19:41:11 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:46:50 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char *alloc_words(char *s , int start , int finish)
   i = 0;
   
   word =(char*) malloc ( sizeof (*s) * ( finish - start )+ 1);
+  if(!word)
+      return(NULL);
   while( s[i] && start < finish )
   {
     word[i] = s[start];
@@ -63,26 +65,51 @@ char *alloc_words(char *s , int start , int finish)
 
 char **ft_split(char const *s, char c)
 {
-    int i;
-    int len;
+    size_t i;
+    size_t j;
+    size_t len;
+    int index;
     int count;
     char **ptr;
 
     i = 0;
-    count = ft_word_count ( s , c );
+    j = 0;
+    if (!s)
+      return (NULL);
+    len = ft_strlen(s);
+    index = -1;
+    count = ft_word_count ((char*)s , c );
     ptr = malloc(sizeof(char *)*(count + 1));
     if(!ptr)
       return(NULL);
-    while(i < count)
+    while(i < len )
     {
-		len = ft_lettre(ptr[i], )
-		i++;
-	}
-    
+      if (s[i] != c && index < 0)
+      {
+        index  = i;
+      }
+      else if ((s[i] == c || i == len ) && index >= 0)
+      {
+        ptr[j] = alloc_words((char*)s , index , i );
+        j++;
+        index = -1; 
+      }
+      i++;
+    }
+    ptr[j] = NULL;
+    return(ptr);
 }
 
-int main ()
-{
-  char *m = " manar  123 ben ";
-  printf("%d", ft_split(m, ' '));
-}
+
+// int main ()
+// {
+//   char *m = "                  olol";
+//   char **n =  ft_split(m, ' ' );
+//   int i;
+//   i = 0;
+//   while ( n[i] )
+//     {
+//       printf("%s\n", n[i]);
+//       i++;
+//     }
+// }

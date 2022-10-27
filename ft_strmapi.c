@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:37:03 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/19 18:30:19 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:48:05 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     
     str = (char *)s;
     i = 0;
-    len = strlen(str);
+    len = ft_strlen(str);
     ptr = (char*)malloc(len*sizeof(char) + 1);
     if(!ptr)
         return(NULL);

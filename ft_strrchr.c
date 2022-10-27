@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrch.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:09:14 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/19 18:30:42 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:08:34 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ char *ft_strrchr(const char *str , int c)
 
     ptr = (char *)str;
     len = ft_strlen(ptr);
-
-    while (len > 0)
+    if ( c == 0)
+        return (ptr + ft_strlen(ptr));
+    while (len -- )
     {
-        if (ptr[len] == c)
+        if (ptr[len] == (unsigned char)c)
         {
             return (&ptr[len]);
         }
-        len--;
+        
     }
     return(NULL);
 }

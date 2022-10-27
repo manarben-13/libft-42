@@ -6,36 +6,37 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:25:51 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/19 18:29:55 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 21:11:59 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- size_t ft_strlcat(char *dst, const char *src, size_t size)
+ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
  {
-     size_t i;
-     size_t len_d;
-     size_t len_s;
-     char *s;
+    size_t    i;
+    size_t    sl;
+    size_t    dl;
 
-     i = 0;
- 	s = (char *)src;
-     len_d = ft_strlen(dst);
-     len_s = ft_strlen(src);
- 	if (len_d <= size)
- 		return(len_s + size);
- 	size = size - len_d;
-	len_d--;
-     while (len_d + i < size -1 )
-	 {
-         dst[len_d + i ] = s[i];
-         i++;
-     }
-     dst[len_d+i]= '\0';
-     return(len_d +len_s);
-    
- }
+    i = 0;
+    sl = ft_strlen(src);
+    if (dstsize == 0)
+        return (sl);
+    dl = strlen(dst);
+    if (dstsize < dl)
+        return (dstsize + sl);
+    if (dstsize && dstsize > dl)
+    {
+        dstsize = dstsize - dl - 1;
+        while (src[i] && i < dstsize)
+        {
+            dst[dl + i] = src[i];
+            i++;
+        }
+        dst[dl + i] = '\0';
+    }
+    return (sl + dl);
+}
 
 // int main() 
 // {

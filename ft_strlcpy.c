@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:51:16 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/19 18:30:03 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:59:20 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,21 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int len = 0;
-	size_t i = 0;
+	int len ;
+	size_t i ;
 	char *s = (char*)src;
 
-	len = ft_strlen(src);
-	if (dstsize < 1)
-		return(len);
-	while (i < dstsize - 1)
+	len = (int)ft_strlen(src);
+	i = 0;
+	if ( dstsize )
 	{
-		dst[i] = s[i];
-		i++;
+		while ( src[i] && i < dstsize - 1)
+		{
+			dst[i] = s[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
 	return(len);
 }
 
