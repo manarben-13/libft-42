@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:45:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/26 19:36:18 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/29 10:23:23 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 int ft_isalpha(int arg);
 int ft_isdigit( int arg );
 int ft_isprint(int arg);
-int ft_strlen(const char *str);
+size_t ft_strlen(const char *str);
 int ft_isascii(int arg);
 void *ft_memset(void *arr , int c , size_t n);
 void ft_bzero(void *s , size_t n );

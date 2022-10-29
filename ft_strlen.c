@@ -6,14 +6,14 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:23:26 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/10 15:35:40 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/29 10:22:32 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
-int ft_strlen(const char *str)
+size_t ft_strlen(const char *str)
 {
-    int i = 0;
+    size_t i = 0;
     while (str[i]!='\0')
     {
         i++;

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:02 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/26 19:48:16 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/29 11:03:16 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char *src;
 	char *str;
 	int j;
-	int start;
-	int end;
+	size_t start;
+	size_t end;
 	int len;
 	char *ptr;
 	

@@ -6,18 +6,18 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:37:03 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/26 19:48:05 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/28 19:24:58 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_edit(unsigned int i ,char  c)
-{
-    i = 0;
-   c += i;
-    return(c);
-}
+// char ft_edit(unsigned int i ,char  c)
+// {
+//     i = 0;
+//    c += i;
+//     return(c);
+// }
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
