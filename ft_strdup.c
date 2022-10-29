@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:32:53 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/29 11:09:26 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/29 11:55:26 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	str = (char*) s1;
-	if (!s1)
-		return NULL;
 	len = ft_strlen(str);
-	ptr = malloc(sizeof(char *) * len + 1);
+	ptr = (char *)malloc(sizeof( char ) *(len + 1));
 	if (!ptr)
 		return NULL;
-	while( s1[i] )
+	while( i < len )
 	{
 		ptr[i]= s1[i];
 		i++;
@@ -36,13 +34,13 @@ char	*ft_strdup(const char *s1)
 	return(ptr); 
 }
 
-int main ()
-{
-  char *s;
-  s = "this is a normal test";
-  char *s1 = ft_strdup(s);
-  char *s2 = strdup(s);
+// int main ()
+// {
+//   char *s;
+//   s = "this is a normal test";
+//   char *s1 = ft_strdup(s);
+//   char *s2 = strdup(s);
   
-  printf ("%s\n%lu\n", s1, sizeof(s1));
-  printf ("%s\n%lu\n", s2, sizeof(s2));
-}
+//   printf ("%s\n%lu\n", s1, sizeof(s1));
+//   printf ("%s\n%lu\n", s2, sizeof(s2));
+// }

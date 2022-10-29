@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 12:32:34 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 12:30:26 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/29 16:04:33 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ int counter (long nbr)
 	int count ;
 	
 	count = 0;
-	
 	if (nbr < 0)
 	{
 		count ++;
 		nbr = nbr * -1;
 	}
+	if ( nbr == 0)
+      count ++;
 	while ( nbr != 0)
 	{
 		nbr = nbr / 10;
@@ -44,7 +45,7 @@ char	*ft_itoa(int n)
     ptr = (char *)malloc(count + 1);
     if (!ptr)
         return NULL;
-    ptr[count] = '\0';
+    ptr[count ] = '\0';
 	if (n < 0)
 	{
 		nb *= -1;
@@ -61,8 +62,8 @@ char	*ft_itoa(int n)
     return(ptr);
 }
 
-// int main ()
-// {
-//   int m = -2147483648;
-//   printf ("m = {%s}\n" , ft_itoa(m));
-// }
+int main ()
+{
+  int m = -0;
+  printf ("m = {%s}\nlen == %lu\n" , ft_itoa(m), strlen(ft_itoa(m)));
+}

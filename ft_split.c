@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:08:38 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/26 19:46:50 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/29 12:06:51 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char **ft_split(char const *s, char c)
     ptr = malloc(sizeof(char *)*(count + 1));
     if(!ptr)
       return(NULL);
-    while(i < len )
+    while(i <= len )
     {
       if (s[i] != c && index < 0)
       {

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:02 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/29 11:03:16 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:19:32 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,14 @@ int    ft_end(char *s, char *set)
     i = 0;
     c = 0;
     
-    while (len >=0 && set [i] )
+    while (len >= 0 && set[i] )
     {
       i =0;
-      while (set [i] && s [len] != set [i])
+      while (set[i] && s [len] != set[i])
       {
         i++;
       }
-      if( s[len] == set [i])
+      if( s[len] == set[i])
       {
         c++;
       }
@@ -85,7 +85,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	
 	if (len <= 0)
 		return (ft_strdup(""));
-	ptr = (char*)malloc(len *sizeof(char*) + 1);
+	ptr = (char *)malloc(len + 1);
 	if (!ptr)
 		return NULL;
 	while (start < (ft_strlen(src) - end ))
