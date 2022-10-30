@@ -6,16 +6,16 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 19:42:14 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/05 19:53:49 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 18:52:47 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
-int ft_isdigit( int arg )
+int	ft_isdigit(int arg)
 {
-    if (arg >= 48 && arg <= 57 )
-        return(1);
-    else 
-        return(0);
+	if (arg >= 48 && arg <= 57)
+		return (1);
+	else
+		return (0);
 }

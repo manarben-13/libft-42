@@ -6,16 +6,16 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 12:30:16 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 13:00:15 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 18:54:09 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
-int ft_isprint(int arg)
+int	ft_isprint(int arg)
 {
 	if (arg >= 32 && arg <= 126)
-		return(1);
+		return (1);
 	else
-		return(0);
+		return (0);
 }

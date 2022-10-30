@@ -6,28 +6,28 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 12:03:19 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 22:54:21 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 19:08:57 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- void *ft_memchr(const void *s, int c, size_t n)
- {
-	unsigned char *ptr;
-	size_t i;
-	
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned char	*ptr;
+	size_t			i;
+
 	i = 0;
-	ptr = (unsigned char*)s;
-	while(i < n)
+	ptr = (unsigned char *)s;
+	while (i < n)
 	{
-		if(ptr[i]== (unsigned char)c)
+		if (ptr[i] == (unsigned char)c)
 		{
-			return(&ptr[i]);
+			return (&ptr[i]);
 		}
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }
 // int main ()
 //  {
@@ -36,4 +36,3 @@
 //    printf("%s\n" , ft_memchr(n,m,3));
 //    printf("%s" , memchr(n,m,3));
 //  }
-

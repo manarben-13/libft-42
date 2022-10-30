@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:14:51 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/29 14:06:56 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:41:30 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 	if(!s)
 		return(NULL);
 	if (start >= ft_strlen(s))
-		return((char*)calloc(1,sizeof(char)));
-	if(strlen(s) <= start + len )
+		return((char*)ft_calloc(1,sizeof(char)));
+	if(ft_strlen(s) <= start + len )
 		ptr = malloc((len + 1)*sizeof(char));
 	else 
-    	ptr = malloc((len + 1)* sizeof(char));
+    	ptr = malloc((len + 1)*sizeof(char));
     if(!ptr)
       return(NULL);
     while(s[start] && i < len )

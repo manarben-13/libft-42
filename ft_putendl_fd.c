@@ -6,25 +6,25 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 20:40:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 13:26:49 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 20:21:20 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putendl_fd(char *s, int fd)
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	
 	if (!s)
 		return ;
-
 	while (s[i])
 	{
-		ft_putchar_fd(s[i],fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	ft_putchar_fd('\n',fd);
+	ft_putchar_fd('\n', fd);
 }
 
 // int main()

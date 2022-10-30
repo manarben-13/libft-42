@@ -6,16 +6,16 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:09:04 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/23 12:57:47 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 18:50:20 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
-int ft_isascii(int arg)
+int	ft_isascii(int arg)
 {
-    if(arg>= 0 && arg <= 127)
-        return(1);
-    else 
-        return(0);
+	if (arg >= 0 && arg <= 127)
+		return (1);
+	else
+		return (0);
 }

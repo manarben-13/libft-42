@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:08:38 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/29 12:06:51 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:39:12 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,25 +42,35 @@ int ft_word_count(char *str , char c)
     return(count);
 }
 
+void    ft_free(char **s)
+{
+    int    i;
+
+    i = 0;
+    while (s[i])
+	{
+        free(s[i++]);
+	}
+    free(s);
+}
+
 char *alloc_words(char *s , int start , int finish)
 {
-  int i;
-  char *word;
-  
-  i = 0;
-  
-  word =(char*) malloc ( sizeof (*s) * ( finish - start )+ 1);
-  if(!word)
-      return(NULL);
-  while( s[i] && start < finish )
-  {
-    word[i] = s[start];
-    
-    start ++;
-    i++;
-  }
-  word[i] = '\0';
-  return(word);
+	int		i;
+	char	*word;
+	
+	i = 0;
+	word = (char*) malloc ( sizeof (*s) * ( finish - start )+ 1);
+	if(!word)
+		return(NULL);
+	while( s[i] && start < finish )
+	{
+		word[i] = s[start];
+		start ++;
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
 }
 
 char **ft_split(char const *s, char c)
@@ -78,38 +88,40 @@ char **ft_split(char const *s, char c)
       return (NULL);
     len = ft_strlen(s);
     index = -1;
-    count = ft_word_count ((char*)s , c );
+    count = ft_word_count((char*)s, c);
     ptr = malloc(sizeof(char *)*(count + 1));
     if(!ptr)
-      return(NULL);
+	  return (NULL);
     while(i <= len )
     {
-      if (s[i] != c && index < 0)
-      {
-        index  = i;
-      }
-      else if ((s[i] == c || i == len ) && index >= 0)
-      {
-        ptr[j] = alloc_words((char*)s , index , i );
-        j++;
-        index = -1; 
-      }
-      i++;
-    }
-    ptr[j] = NULL;
-    return(ptr);
+		if (s[i] != c && index < 0)
+			index  = i;
+		else if ((s[i] == c || i == len ) && index >= 0)
+		{
+			ptr[j] = alloc_words((char*)s , index , i );
+			if (!ptr[j])
+			{
+				ft_free(ptr);
+				return (NULL);
+			}
+			j++;
+			index = -1; 
+		}
+		i++;
+	}
+	ptr[j] = NULL;
+	return (ptr);
 }
 
-
 // int main ()
-// {
-//   char *m = "                  olol";
-//   char **n =  ft_split(m, ' ' );
-//   int i;
-//   i = 0;
-//   while ( n[i] )
-//     {
-//       printf("%s\n", n[i]);
-//       i++;
-//     }
-// }
+// // {
+// //   char *m = "                  olol";
+// //   char **n =  ft_split(m, ' ' );
+// //   int i;
+// //   i = 0;
+// //   while ( n[i] )
+// //     {
+// //       printf("%s\n", n[i]);
+// //       i++;
+// //     }
+// // }

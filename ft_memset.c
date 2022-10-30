@@ -6,13 +6,13 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 09:51:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/09 15:49:52 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 19:25:56 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *arr , int c , size_t n)
+void	*ft_memset(void *arr, int c, size_t n)
 {
 	unsigned char	*ptr;
 	size_t			i;
@@ -24,7 +24,7 @@ void *ft_memset(void *arr , int c , size_t n)
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	return(arr);
+	return (arr);
 }
 
 //int main ()

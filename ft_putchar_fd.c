@@ -6,15 +6,15 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:17:44 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/18 21:17:57 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/30 19:28:20 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-	write(fd,&c,1);
+	write(fd, &c, 1);
 }
 
 // int main ()
