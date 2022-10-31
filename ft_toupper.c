@@ -6,20 +6,17 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 16:08:45 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/08 16:45:27 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/10/31 20:12:22 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper (int c)
+int	ft_toupper(int c)
 {
-	
-	if (c >= 97 && c <= 122 )
-	{
-		c -=32;
-	}
-	return(c);
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }
 
 //int main ()
