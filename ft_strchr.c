@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:29:43 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/30 20:33:31 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:55:40 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strchr(const char *str, int c)
 	char	*ptr;
 	int		i;
 
-	i = 0;
 	ptr = (char *)str;
+	i = 0;
 	if (c == 0)
 		return (ptr + ft_strlen(ptr));
 	while (ptr[i])

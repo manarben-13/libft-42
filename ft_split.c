@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:08:38 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/31 22:37:50 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/01 20:16:20 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static	int	ft_word_count(char *str, char c)
 	return (count);
 }
 
-static	int	ft_free(char **s)
+static	char	**ft_free(char **s)
 {
 	int	i;
 
@@ -45,6 +45,7 @@ static	int	ft_free(char **s)
 		free(s[i++]);
 	}
 	free(s);
+	return (NULL);
 }
 
 static	char	*alloc_words(char *s, int start, int finish)
