@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 12:32:34 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/30 19:04:51 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:09:04 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,8 @@ char	*ft_itoa(int n)
 	}
 	while (count > 0)
 	{
-		ptr[count - 1] = (nb % 10 + 48);
+		ptr[--count] = (nb % 10 + 48);
 		nb = nb / 10;
-		count--;
 	}
 	if (i == 1)
 		ptr[0] = '-';

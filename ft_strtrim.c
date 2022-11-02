@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:02 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/31 20:32:26 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/02 18:51:58 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,33 +57,26 @@ static	int	ft_end(char *s, char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*src;
-	char	*str;
-	int		j;
 	size_t	start;
 	size_t	end;
 	int		len;
 	char	*ptr;
 
 	src = (char *)s1;
-	str = (char *)set;
-	j = 0;
 	if (!s1 || !set)
 		return (NULL);
-	start = ft_start(src, str);
-	end = ft_end(src, str);
+	start = ft_start(src, (char *)set);
+	end = ft_end(src, (char *)set);
 	len = ft_strlen(src) - (start + end);
 	if (len <= 0)
 		return (ft_strdup(""));
 	ptr = (char *)malloc(len + 1);
 	if (!ptr)
 		return (NULL);
+	len = 0;
 	while (start < (ft_strlen(src) - end))
-	{
-		ptr[j] = src [start];
-		j++;
-		start ++;
-	}
-	ptr[j] = '\0';
+		ptr[len++] = src [start++];
+	ptr[len] = '\0';
 	return (ptr);
 }
 

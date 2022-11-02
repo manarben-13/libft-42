@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:45:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/31 21:26:48 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:54:26 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 # include<string.h>
 # include<unistd.h>
 # include <fcntl.h>
+
+typedef struct s_spl
+{
+	size_t	i;
+	size_t	j;
+	size_t	len;
+	int		index;
+	int		count;
+	char	**ptr;
+}	t_spl;
 
 int		ft_isalpha(int arg);
 int		ft_isdigit(int arg);
