@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 12:03:19 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/04 20:45:25 by mben-sal         ###   ########.fr       */
+/*   Created: 2022/11/06 12:40:40 by mben-sal          #+#    #+#             */
+/*   Updated: 2022/11/06 12:53:34 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	t_list	*head;
 
-	i = 0;
-	ptr = (unsigned char *)s;
-	while (i < n)
-	{
-		if (ptr[i] == (unsigned char)c)
-		{
-			return (&ptr[i]);
-		}
-		i++;
-	}
-	return (NULL);
+	head = malloc(sizeof(t_list));
+	if (!head)
+		return (0);
+	head->content = content;
+	head->next = NULL;
+	return (head);
 }
 
-// int main ()
-//  {
-//    char n[5] = {1, 2, 3, 4, 5};
-//    int m = 1;
-//    printf("%s\n" , ft_memchr(n,m,3));
-//    printf("%s" , memchr(n,m,3));
-//  }
+// int main()
+// {
+// 	int x = 27;
+// 	t_list *manar = ft_lstnew(&x);
+// 	printf("%d",*(int*)(manar->content));
+// }

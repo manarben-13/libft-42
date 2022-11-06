@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:08:38 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/02 20:09:34 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/05 12:58:42 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static	char	*alloc_words(char *s, int start, int finish)
 	return (word);
 }
 
-char	**fill_str(t_spl *spl, char *s, char c)
+static	char	**fill_str(t_spl *spl, char *s, char c)
 {
 	while (spl->i <= spl->len)
 	{
@@ -109,14 +109,14 @@ char	**ft_split(char const *s, char c)
 }
 
 // int main ()
-// // {
-// //   char *m = "                  olol";
-// //   char **n =  ft_split(m, ' ' );
-// //   int i;
-// //   i = 0;
-// //   while ( n[i] )
-// //     {
-// //       printf("%s\n", n[i]);
-// //       i++;
-// //     }
-// // }
+// {
+//   char *m = "                  olol";
+//   char **n =  ft_split(m, ' ' );
+//   int i;
+//   i = 0;
+//   while ( n[i] )
+//     {
+//       printf("%s\n", n[i]);
+//       i++;
+//     }
+// }

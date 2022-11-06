@@ -6,13 +6,13 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 12:32:34 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/02 19:09:04 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/05 12:54:24 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	counter(long nbr)
+static	int	counter(long nbr)
 {
 	int	count;
 
