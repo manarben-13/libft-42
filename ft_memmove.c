@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:38:43 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/06 21:38:35 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:08:33 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 //     printf("%s\n", s );
 // 	s = memmove(n , n + 3 , 3);
 //     printf("%s", s );
+// }
+
+// int main ()
+// {
+//  int m [2] ={1337};
+//  int n [2] = {123};
+//  ft_memmove(m ,n , sizeof(int));
+//  printf("%d", m);
+// }
+// int main ()
+// {
+//   int m [6] = {1337, 23, 24, 53, 12};
+//   ft_memmove(m + 1 ,m , sizeof(int) * 3);
+//   for (int i = 0; i < 5; i++)
+//     printf("%d\n", m[i]);
 // }
