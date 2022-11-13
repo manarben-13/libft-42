@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 12:32:34 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/05 12:54:24 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:23:57 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,3 @@ char	*ft_itoa(int n)
 		ptr[0] = '-';
 	return (ptr);
 }
-
-// int main ()
-// {
-//   int m = -0;
-//   printf ("m = {%s}\nlen == %lu\n" , ft_itoa(m), strlen(ft_itoa(m)));
-// }

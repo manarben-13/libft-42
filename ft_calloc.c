@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:49:27 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/08 18:36:10 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:11:35 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,9 @@ void	*ft_calloc(size_t count, size_t size)
 	i = 0;
 	if (count == SIZE_MAX && size == SIZE_MAX)
 		return (NULL);
-	ptr = (unsigned char *)malloc(size * count);
+	ptr = malloc(size * count);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, size * count);
 	return (ptr);
 }
-// int main ()
-// {
-//     char *s = calloc (65,5);
-//     printf("%p\t%zu\n", s, strlen(s));
-//     printf("%p\t %zu\n", ft_calloc (6,5), strlen(ft_calloc (2,4)));
-// } 

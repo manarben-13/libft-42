@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:16:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/31 19:54:43 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:25:10 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int main ()
-// {
-// 	char *m;
-// 	char *n;
-// 	m = "MZIRIBMZIRIBMZE123";
-// 	n = "MZIRIBMZE";
-
-// 	printf("%s\n", ft_strnstr(m,n, strlen(n)));
-// 	printf("%s\n", strnstr(m,n, strlen(n)));
-// }

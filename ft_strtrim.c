@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:02 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/02 18:51:58 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:25:16 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,14 +79,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[len] = '\0';
 	return (ptr);
 }
-
-// int main ()
-// {
-//     char *m;
-//     char *r;
-//     char *n;
-//     m = "123manar123";
-//     r = "123";
-//     n = ft_strtrim(m,r);
-//     printf("%s\n", n);
-// }

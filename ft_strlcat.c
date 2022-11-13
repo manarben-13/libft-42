@@ -6,11 +6,12 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:25:51 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/31 19:15:26 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:27:35 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include<string.h>
 
 size_t	ft_strlcat(char	*dst, const char *src, size_t dstsize)
 {
@@ -23,7 +24,7 @@ size_t	ft_strlcat(char	*dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (sl);
 	dl = ft_strlen(dst);
-	if (dstsize < dl)
+	if (dstsize <= dl)
 		return (dstsize + sl);
 	if (dstsize && dstsize > dl)
 	{

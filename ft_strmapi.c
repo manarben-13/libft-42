@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:37:03 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/31 19:44:13 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/13 15:16:42 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	char			*ptr;
 
-	str = (char *)s;
-	if (!str)
+	if (!s || !f)
 		return (NULL);
+	str = (char *)s;
 	i = 0;
 	len = ft_strlen(str);
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
@@ -35,16 +35,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-// char ft_edit(unsigned int i ,char  c)
-// {
-//     i = 0;
-//    c += i;
-//     return(c);
-// }
-// int main ()
-// {
-//     char n[] = "manar";
-// 	ft_strmapi(n, ft_edit());
-//     printf("%s\n", n);
-// }

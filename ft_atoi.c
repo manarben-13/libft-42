@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 08:08:44 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/04 18:48:04 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:35:27 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-// int main ()
-// {
-// 	char *m;
-// 	m = "\t \f\n\r\v12+24";
-
-// 	printf ("%d\n",ft_atoi(m));
-// 	printf ("%d\n",atoi(m));
-// }

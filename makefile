@@ -1,16 +1,16 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/22 11:15:38 by mben-sal          #+#    #+#              #
-#    Updated: 2022/10/27 18:09:02 by mben-sal         ###   ########.fr        #
+#    Updated: 2022/11/13 21:32:02 by mben-sal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =    libft.a
+NAME =   libft.a
 HEADER = libft.h
 
 SRC =   ft_atoi.c\
@@ -50,7 +50,7 @@ SRC =   ft_atoi.c\
 
 OBJ =    $(SRC:.c=.o)
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 

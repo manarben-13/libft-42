@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:08:38 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/06 18:38:40 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 17:53:01 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static	int	ft_word_count(char *str, char c)
 		while (str[i] != 0 && str[i] == c)
 			i++;
 		if (str[i])
-		count = count +1;
+			count = count + 1;
 		while (str[i] != 0 && str[i] != c)
 			i++;
 		while (str[i] != 0 && str[i] == c)
@@ -54,7 +54,7 @@ static	char	*alloc_words(char *s, int start, int finish)
 	char	*word;
 
 	i = 0;
-	word = (char *) malloc(sizeof (*s) * (finish - start) + 1);
+	word = (char *) malloc(sizeof(*s) * (finish - start) + 1);
 	if (!word)
 		return (NULL);
 	while (s[i] && start < finish)
@@ -107,16 +107,3 @@ char	**ft_split(char const *s, char c)
 	fill_str(&spl, (char *)s, c);
 	return (spl.ptr);
 }
-
-// int main ()
-// {
-//   char *m = "                  olol";
-//   char **n =  ft_split(m, ' ' );
-//   int i;
-//   i = 0;
-//   while ( n[i] )
-//     {
-//       printf("%s\n", n[i]);
-//       i++;
-//     }
-// }

@@ -6,11 +6,11 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:23:26 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/10/31 19:31:08 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:24:56 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
